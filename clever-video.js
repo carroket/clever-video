@@ -33,7 +33,7 @@
 
 		// Now let's paint a happy little directive.
 
-		.directive("clever-video", function() {
+		.directive("cleverVideo", function() {
 
 			return {
 
