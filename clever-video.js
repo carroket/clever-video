@@ -37,6 +37,18 @@
 
 			return {
 
+				restrict: "EA",
+
+				scope: {
+
+					service: "@service",
+					videoId: "@videoId",
+					width: "@width",
+					height: "@height",
+					border: "@border",
+					allowFullScreen: "@allowFullScreen"
+				},
+
 				// Note: templateUrl seems to be relative to the element
 				// context. Yuck.
 
@@ -51,6 +63,17 @@
 				controller: function() {
 
 					console.log("Hello from the clever-video directive controller!");
+				},
+
+				compile: function(element, attrs) {
+
+					if (!attrs.width) { attrs.width = 640; }
+
+					if (!attrs.height) { attrs.height = 360; }
+
+					if (!attrs.border) { attrs.border = 0; }
+
+					if (!attrs.allowFullScreen) { attrs.allowFullScreen = true; }
 				}
 			};
 		});
