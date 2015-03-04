@@ -29,7 +29,7 @@
 
 	// Create an AngularJS module.
 
-	angular.module("cleverVideoModule", [])
+	angular.module("cleverVideoModule", ["ngSanitize"])
 
 		// Now let's paint a happy little directive.
 
@@ -56,13 +56,24 @@
 				// anywhere in the library project.
 
 				// TO DO: Try to make this more flexible without resorting to an absolute path, which could be problematic for non-root site deployment.
-				templateUrl: "_assets/modules/clever-video/video.html",
+				//templateUrl: "_assets/modules/clever-video/video.html",
+
+				template: '<iframe width="{{width}}" height="{{height}}" src="{{srcUrl}}" frameborder="0" allowfullscreen></iframe>',
 
 				replace: true,
 
-				controller: function() {
+				controller: function($scope, $sce) {
 
 					console.log("Hello from the clever-video directive controller!");
+
+					$scope.srcUrl = "";
+
+					if ($scope.service == "YouTube") {
+
+						$scope.srcUrl = $sce.trustAsResourceUrl("https://www.youtube.com/embed/" + $scope.videoId);
+
+						console.log("srcUrl: " + $scope.srcUrl);
+					}
 				},
 
 				compile: function(element, attrs) {
