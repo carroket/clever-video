@@ -1,0 +1,361 @@
+/*============================================================================*\
+
+	CSS for Clever Video
+	-----------------------------------------------------------------------
+	© 2015 by Carroket, Inc.
+	http://www.carroket.com/
+	-----------------------------------------------------------------------
+	Made by Brian Sexton.
+	http://www.briansexton.com/
+	-----------------------------------------------------------------------
+	MIT License
+
+\*============================================================================*/
+@import url(http://fonts.googleapis.com/css?family=Rochester);
+
+/*----------------------------------------------------------------------------*\
+	Common
+\*----------------------------------------------------------------------------*/
+
+html
+{
+	padding: 0;
+
+	background-color: #eee;
+	color: #555;
+
+	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-weight: 300;
+
+	margin: 0;
+}
+
+body
+{
+	display: flex;
+
+	flex-direction: column;
+
+	padding: 0;
+
+	min-height: 100vh;
+
+	margin: 0;
+}
+
+h1, h2
+{
+	padding: 0;
+
+	margin: 0;
+}
+
+/*----------------------------------------------------------------------------*\
+	Page Header
+\*----------------------------------------------------------------------------*/
+
+body > header
+{
+	border-bottom: 5px solid #ccc;
+
+	padding: 0.75em 1.5em 1.25em 1.5em;
+
+	background-color: #ddd;
+
+	position: relative;
+}
+
+body > header > h1,
+body > header > h2
+{
+	text-align: center;
+}
+
+body > header > h1
+{
+	max-width: 55%;
+
+	color: #fff;
+
+	font-family: Rochester, cursive;
+	font-size: 4em;
+	font-weight: 400;
+
+	text-shadow: 2px 2px 2px #555;
+
+	line-height: 0.7em;
+
+	margin: 0.25em auto 0.25em auto;
+}
+
+body > header > h2
+{
+	max-width: 55%;
+
+	font-size: 1em;
+	font-weight: normal;
+
+	margin: 0 auto 0 auto;
+}
+
+@media (min-width: 768px)
+{
+	body > header
+	{
+		padding: 0.5em 1.5em;
+
+		overflow: auto;
+	}
+
+	body > header > h1
+	{
+		line-height: 1.25em;
+
+		margin: 0;
+
+		float: left;
+	}
+
+	body > header > h2
+	{
+		position: absolute;
+
+		right: 1.5em;
+		bottom: 1.25em;
+	}
+}
+
+/*----------------------------------------------------------------------------*\
+	Main Content
+\*----------------------------------------------------------------------------*/
+
+main
+{
+	flex: 1;
+
+	box-sizing: border-box;
+
+	padding: 1em;
+
+	max-width: 980px;
+
+	margin: auto;
+
+	position: relative;
+}
+
+main h3
+{
+	font-size: 2em;
+	font-weight: 700;
+
+	margin: 1em 0 0 0;
+}
+
+main > section.info > p
+{
+	border-radius: 0.5em;
+
+	padding: 1em;
+
+	background-color: #f8f8f8;
+
+	font-size: 0.75em;
+
+	margin: 1em 0 0 0;
+}
+
+@media (min-width: 768px)
+{
+	main > section.info
+	{
+		display: flex;
+	}
+
+	main > section.info > p
+	{
+		flex: 1;
+	}
+
+	main > section.info > p:nth-child(odd)
+	{
+
+		margin: 1em 0.5em 0 0;
+	}
+
+	main > section.info > p:nth-child(even)
+	{
+
+		margin: 1em 0 0 0.5em;
+	}
+}
+
+/*----------------------------------------------------------------------------*\
+	Main Content: Videos
+\*----------------------------------------------------------------------------*/
+
+main > section.videos
+{
+	border-radius: 0.25em;
+
+	background-color: rgba(48, 10, 36, 0.05);
+
+	padding: 0.5em
+}
+
+main > section.videos > div.content
+{
+	display: -webkit-flex;
+	display: flex;
+
+	-webkit-flex-wrap: wrap;
+	flex-wrap: wrap;
+
+	-webkit-justify-content: space-between;
+	justify-content: space-between
+}
+
+main > section.videos > div.content > div
+{
+	background-color: rgba(48, 10, 36, 0.35);
+
+	-webkit-flex: 1 0 calc(100% - 1em);
+	flex: 1 0 calc(100% - 1em);
+
+	margin: 0.5em
+}
+
+@media (min-width: 768px)
+{
+	main > section.videos > div.content > div
+	{
+		-webkit-flex: 1 0 calc(50% - 1em);
+		flex: 1 0 calc(50% - 1em)
+	}
+}
+
+@media (min-width: 960px)
+{
+	main > section.videos > div.content > div
+	{
+		-webkit-flex: 1 0 calc(33% - 1em);
+		flex: 1 0 calc(33% - 1em)
+	}
+}
+
+@media (min-width: 1280px)
+{
+	main > section.videos > div.content > div
+	{
+		-webkit-flex: 1 0 calc(25% - 1em);
+		flex: 1 0 calc(25% - 1em)
+	}
+}
+
+@media (min-width: 1920px)
+{
+	main > section.videos > div.content > div
+	{
+		-webkit-flex: 1 0 calc(20% - 1em);
+		flex: 1 0 calc(20% - 1em)
+	}
+}
+
+main > section.videos > div.content > div > div
+{
+	position: relative;
+
+	padding-bottom: 56.25%;
+
+	height: 0
+}
+
+main > section.videos > div.content > div > div > iframe
+{
+	display: block;
+
+	width: 100%;
+	height: 100%;
+
+	position: absolute;
+
+	left: 0;
+	top: 0
+}
+
+/*----------------------------------------------------------------------------*\
+	Page Footer
+\*----------------------------------------------------------------------------*/
+
+body > footer
+{
+	border-top: 5px solid #666;
+
+	padding: 0.5em 1em;
+
+	background-color: #363636;
+	color: #777;
+
+	overflow: auto;
+}
+
+body > footer > p
+{
+	text-align: center;
+	margin: 0.25em;
+}
+
+@media (min-width: 768px)
+{
+	body > footer
+	{
+		display: flex;
+	}
+
+	body > footer > p
+	{
+		flex: 1;
+
+		margin: 0;
+	}
+
+	body > footer > p:first-child
+	{
+		text-align: left;
+
+		order: 1;
+	}
+
+	body > footer > p:nth-child(2)
+	{
+		text-align: right;
+
+		order: 3;
+	}
+
+	body > footer > p:last-child
+	{
+		order: 2;
+	}
+}
+
+body > footer a
+{
+	text-decoration: none;
+}
+
+body > footer a:link,
+body > footer a:visited
+{
+	color: #09c;
+}
+
+body > footer a:hover
+{
+	color: #0cf;
+}
+
+body > footer a:active
+{
+	color: #369;
+}
