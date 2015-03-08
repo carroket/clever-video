@@ -173,7 +173,7 @@ main > section.info > p
 
 	main > section.info > p
 	{
-		flex: 1
+		flex: 1 1 auto
 	}
 
 	main > section.info > p:nth-child(odd)
@@ -314,7 +314,7 @@ body > footer > p
 
 	body > footer > p
 	{
-		flex: 1;
+		flex: 1 1 auto;
 
 		margin: 0
 	}
