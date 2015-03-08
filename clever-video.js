@@ -58,7 +58,7 @@
 				// TO DO: Try to make this more flexible without resorting to an absolute path, which could be problematic for non-root site deployment.
 				//templateUrl: "_assets/modules/clever-video/video.html",
 
-				template: '<iframe width="{{width}}" height="{{height}}" src="{{srcUrl}}" frameborder="0" allowfullscreen></iframe>',
+				template: '<div><iframe width="{{width}}" height="{{height}}" src="{{srcUrl}}" frameborder="0" allowfullscreen></iframe></div>',
 
 				replace: true,
 
