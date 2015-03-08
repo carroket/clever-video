@@ -32,8 +32,10 @@ html
 
 body
 {
+	display: -webkit-flex;
 	display: flex;
 
+	-webkit-flex-direction: column;
 	flex-direction: column;
 
 	padding: 0;
@@ -61,6 +63,9 @@ body > header
 	padding: 0.75em 1.5em 1.25em 1.5em;
 
 	background-color: #ddd;
+
+	-webkit-flex: 0 0 auto;
+	flex: 0 0 auto;
 
 	position: relative
 }
@@ -131,7 +136,8 @@ body > header > h2
 
 main
 {
-	outline: 1px dotted green;
+	-webkit-flex: 1 0 auto;
+	flex: 1 0 auto;
 
 	padding: 1em
 }
@@ -153,6 +159,8 @@ main > section.info
 
 main > section.info > p
 {
+	box-sizing: border-box;
+
 	border-radius: 0.5em;
 
 	padding: 1em;
@@ -168,17 +176,18 @@ main > section.info > p
 {
 	main > section.info
 	{
+		display: -webkit-flex;
 		display: flex
 	}
 
 	main > section.info > p
 	{
-		flex: 1 1 auto
+		-webkit-flex: 0 0 calc(50% - 0.5em);
+		flex: 0 0 calc(50% - 0.5em)
 	}
 
 	main > section.info > p:nth-child(odd)
 	{
-
 		margin: 1em 0.5em 0 0
 	}
 
@@ -237,8 +246,8 @@ main > section.videos > div.content > div
 {
 	main > section.videos > div.content > div
 	{
-		-webkit-flex: 1 0 calc(33% - 1em);
-		flex: 1 0 calc(33% - 1em)
+		-webkit-flex: 1 0 calc(33.33% - 1em);
+		flex: 1 0 calc(33.33% - 1em)
 	}
 }
 
@@ -295,6 +304,9 @@ body > footer
 	background-color: #363636;
 	color: #777;
 
+	-webkit-flex: 0 0 auto;
+	flex: 0 0 auto;
+
 	overflow: auto
 }
 
@@ -309,12 +321,17 @@ body > footer > p
 {
 	body > footer
 	{
-		display: flex
+		display: -webkit-flex;
+		display: flex;
+
+		-webkit-justify-content: space-between;
+		justify-content: space-between
 	}
 
 	body > footer > p
 	{
-		flex: 1 1 auto;
+		-webkit-flex: 0 1 33.33%;
+		flex: 0 1 33.33%;
 
 		margin: 0
 	}
@@ -323,6 +340,7 @@ body > footer > p
 	{
 		text-align: left;
 
+		-webkit-order: 1;
 		order: 1
 	}
 
@@ -330,11 +348,13 @@ body > footer > p
 	{
 		text-align: right;
 
+		-webkit-order: 3;
 		order: 3
 	}
 
 	body > footer > p:last-child
 	{
+		-webkit-order: 2;
 		order: 2
 	}
 }
