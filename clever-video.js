@@ -45,7 +45,6 @@
 					videoId: "@videoId",
 					width: "@width",
 					height: "@height",
-					border: "@border",
 					allowFullScreen: "@allowFullScreen"
 				},
 
@@ -58,7 +57,7 @@
 				// TO DO: Try to make this more flexible without resorting to an absolute path, which could be problematic for non-root site deployment.
 				//templateUrl: "_assets/modules/clever-video/video.html",
 
-				template: '<div><iframe width="{{width}}" height="{{height}}" src="{{srcUrl}}" frameborder="0" allowfullscreen></iframe></div>',
+				template: '<div><iframe width="{{width}}" height="{{height}}" src="{{srcUrl}}" allowfullscreen></iframe></div>',
 
 				replace: true,
 
@@ -81,8 +80,6 @@
 					if (!attrs.width) { attrs.width = 640; }
 
 					if (!attrs.height) { attrs.height = 360; }
-
-					if (!attrs.border) { attrs.border = 0; }
 
 					if (!attrs.allowFullScreen) { attrs.allowFullScreen = true; }
 				}
