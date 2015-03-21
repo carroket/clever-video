@@ -1,0 +1,108 @@
+/*============================================================================*\
+
+	CSS for Clever Video
+	-----------------------------------------------------------------------
+	© 2015 by Carroket, Inc.
+	http://www.carroket.com/
+	-----------------------------------------------------------------------
+	Made by Brian Sexton.
+	http://www.briansexton.com/
+	-----------------------------------------------------------------------
+	MIT License
+
+\*============================================================================*/
+
+/*----------------------------------------------------------------------------*\
+	Main Content: Videos
+\*----------------------------------------------------------------------------*/
+
+main > section.videos
+{
+	border-radius: 0.25em;
+
+	background-color: #ddd;
+
+	padding: 0.5em
+}
+
+main > section.videos > div.content
+{
+	display: -webkit-flex;
+	display: flex;
+
+	-webkit-flex-wrap: wrap;
+	flex-wrap: wrap;
+
+	-webkit-justify-content: space-between;
+	justify-content: space-between
+}
+
+main > section.videos > div.content > div
+{
+	background-color: #ccc;
+
+	-webkit-flex: 1 0 calc(100% - 1em);
+	flex: 1 0 calc(100% - 1em);
+
+	margin: 0.5em
+}
+
+@media (min-width: 768px)
+{
+	main > section.videos > div.content > div
+	{
+		-webkit-flex: 1 0 calc(50% - 1em);
+		flex: 1 0 calc(50% - 1em)
+	}
+}
+
+@media (min-width: 960px)
+{
+	main > section.videos > div.content > div
+	{
+		-webkit-flex: 1 0 calc(33.33% - 1em);
+		flex: 1 0 calc(33.33% - 1em)
+	}
+}
+
+@media (min-width: 1280px)
+{
+	main > section.videos > div.content > div
+	{
+		-webkit-flex: 1 0 calc(25% - 1em);
+		flex: 1 0 calc(25% - 1em)
+	}
+}
+
+@media (min-width: 1920px)
+{
+	main > section.videos > div.content > div
+	{
+		-webkit-flex: 1 0 calc(20% - 1em);
+		flex: 1 0 calc(20% - 1em)
+	}
+}
+
+main > section.videos > div.content > div > div
+{
+	position: relative;
+
+	padding-bottom: 56.25%;
+
+	height: 0
+}
+
+main > section.videos > div.content > div > div > iframe
+{
+	display: block;
+
+	border: none;
+
+	width: 100%;
+	height: 100%;
+
+	position: absolute;
+
+	left: 0;
+	top: 0
+}
