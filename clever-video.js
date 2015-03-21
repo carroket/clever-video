@@ -63,15 +63,11 @@
 
 				controller: function($scope, $sce) {
 
-					console.log("Hello from the clever-video directive controller!");
-
 					$scope.srcUrl = "";
 
 					if ($scope.service == "YouTube") {
 
 						$scope.srcUrl = $sce.trustAsResourceUrl("https://www.youtube.com/embed/" + $scope.videoId);
-
-						console.log("srcUrl: " + $scope.srcUrl);
 					}
 				},
 
