@@ -154,7 +154,7 @@ main > section.info
 {
 	max-width: 980px;
 
-	margin: auto
+	margin: 1em auto 0 auto
 }
 
 main > section.info > p
@@ -169,10 +169,15 @@ main > section.info > p
 
 	font-size: 0.75em;
 
-	margin: 1em 0 0 0
+	margin: 0
 }
 
-@media (min-width: 768px)
+main > section.info > p + p
+{
+	margin-top: 1em
+}
+
+@media (min-width: 600px)
 {
 	main > section.info
 	{
@@ -182,19 +187,17 @@ main > section.info > p
 
 	main > section.info > p
 	{
-		-webkit-flex: 0 0 calc(50% - 0.5em);
-		flex: 0 0 calc(50% - 0.5em)
+		width: calc(50% - 0.5em)
 	}
 
-	main > section.info > p:nth-child(odd)
+	main > section.info > p:nth-child(1)
 	{
-		margin: 1em 0.5em 0 0
+		margin-right: 0.5em
 	}
 
-	main > section.info > p:nth-child(even)
+	main > section.info > p:nth-child(2)
 	{
-
-		margin: 1em 0 0 0.5em
+		margin: 0 0 0 0.5em
 	}
 }
 
