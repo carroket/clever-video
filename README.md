@@ -25,6 +25,7 @@ Thanks to [HTML Preview for GitHub Repositories](https://github.com/htmlpreview/
 
 * Internet Explorer does not display dynamically created iframes as expected.
 * In browsers that *do* display dynamically created iframes as expected (e.g., Google Chrome, Mozilla Firefox, and Apple Safari), there can be a significant delay when loading several videos at once. This is not a problem specific to Clever Video, but one of the specific issues Clever Video is being made to address.
+* Grunt does not yet do anything. Soon! :)
 
 ## Who is making this?
 
