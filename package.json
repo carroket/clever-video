@@ -1,0 +1,22 @@
+{
+    "name": "clever-video",
+    "version": "0.0.0",
+    "description": "Clean and Fast Video Embedding for Web Pages",
+    "main": "demo/video.html",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/carroket/clever-video.git"
+    },
+    "author": {
+        "name": "Brian Sexton",
+        "url": "http://www.briansexton.com/"
+    },
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/carroket/clever-video/issues"
+    },
+    "homepage": "https://github.com/carroket/clever-video#readme"
+}
