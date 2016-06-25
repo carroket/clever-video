@@ -4,7 +4,9 @@
     "description": "Clean and Fast Video Embedding for Web Pages",
     "main": "demo/video.html",
     "devDependencies": {
-        "grunt": "latest"
+        "grunt": "latest",
+        "grunt-contrib-clean": "latest",
+        "grunt-contrib-copy": "latest"
     },
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
