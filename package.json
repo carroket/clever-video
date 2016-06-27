@@ -6,7 +6,8 @@
     "devDependencies": {
         "grunt": "latest",
         "grunt-contrib-clean": "latest",
-        "grunt-contrib-copy": "latest"
+        "grunt-contrib-copy": "latest",
+        "grunt-contrib-uglify": "latest"
     },
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1"
