@@ -19,7 +19,7 @@ Clever Video is still very much a work in progress. It already uses [custom HTML
 
 ## Demo Page
 
-Thanks to [HTML Preview for GitHub Repositories](https://github.com/htmlpreview/htmlpreview.github.com), you can try a [live demo](http://htmlpreview.github.io/?https://github.com/carroket/clever-video/blob/master/demo/video.html) without even downloading the Clever Video repository.
+Thanks to [HTML Preview for GitHub Repositories](https://github.com/htmlpreview/htmlpreview.github.com), you can try a [live demo](http://htmlpreview.github.io/?https://github.com/carroket/clever-video/blob/master/source/demo/video.html) without even downloading the Clever Video repository.
 
 ## Known Issues
 
