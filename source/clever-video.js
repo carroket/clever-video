@@ -3,10 +3,10 @@
 	JavaScript for Clever Video
 	-----------------------------------------------------------------------
 	© 2015-2017 by Carroket, Inc.
-	http://www.carroket.com/
+	https://carroket.com/
 	-----------------------------------------------------------------------
 	Made by Brian Sexton.
-	http://www.briansexton.com/
+	https://briansexton.com/
 
  \*============================================================================*/
 
