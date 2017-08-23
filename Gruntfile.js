@@ -98,5 +98,10 @@ module.exports = function (grunt) {
 
 	grunt.registerTask('build', ['clean', 'copy', 'uglify']);
 
+	grunt.registerTask('finalize-docs', 'Finalize the docs directory for publishing.', function() {
+
+		grunt.file.write('docs/.nojekyll', '');
+	});
+
 	grunt.registerTask('default', ['build', 'browserSync', 'watch']);
 };
