@@ -20,6 +20,15 @@ module.exports = function (grunt) {
 		clean: {
 			build: {
 				src: "build"
+			},
+			demo: {
+				src: "build/demo"
+			},
+			docs: {
+				src: "docs"
+			},
+			library: {
+				src: "build/*.js"
 			}
 		},
 
