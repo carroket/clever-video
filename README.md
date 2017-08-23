@@ -17,9 +17,9 @@ While there is some overlap among those goals, each one has value apart from oth
 
 Clever Video is still very much a work in progress. It already uses [custom HTML elements](https://webcomponents.org/articles/introduction-to-custom-elements/), but for now it replaces them via [AngularJS](https://angularjs.org/). AngularJS may or may not be required for future versions.
 
-## Demo Page
+## Live Demo
 
-Thanks to [HTML Preview for GitHub Repositories](https://github.com/htmlpreview/htmlpreview.github.com), you can try a [live demo](https://htmlpreview.github.io/?https://github.com/carroket/clever-video/blob/master/source/demo/video.html) without even downloading the Clever Video repository.
+You can see a live demo running [here](http://carroket.github.io/clever-video/).
 
 ## Known Issues
 
