@@ -5,9 +5,11 @@
     "main": "demo/video.html",
     "devDependencies": {
         "grunt": "latest",
+        "grunt-browser-sync": "^2.2.0",
         "grunt-contrib-clean": "latest",
         "grunt-contrib-copy": "latest",
-        "grunt-contrib-uglify": "latest"
+        "grunt-contrib-uglify": "latest",
+        "grunt-contrib-watch": "^1.0.0"
     },
     "scripts": {
         "demo": "browser-sync start --server build/demo --index video.html",
