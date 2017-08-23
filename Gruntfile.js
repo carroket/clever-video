@@ -4,6 +4,19 @@ module.exports = function (grunt) {
 
 		pkg: grunt.file.readJSON('package.json'),
 
+		browserSync: {
+			dev: {
+				bsFiles: {
+					src: 'build/demo/**.*'
+				},
+				options: {
+					watchTask: true,
+					server: 'build/demo',
+					index: 'video.html'
+				}
+			}
+		},
+
 		clean: {
 			build: {
 				src: "build"
@@ -49,12 +62,25 @@ module.exports = function (grunt) {
 					'build/clever-video.min.js': ['source/clever-video.js']
 				}
 			}
+		},
+
+		watch: {
+			demo: {
+				files: 'source/demo/**/*.*',
+				tasks: ['copy:demo']
+			},
+			library: {
+				files: 'source/*.js',
+				tasks: ['copy:library', 'uglify']
+			}
 		}
 	});
 
+	grunt.loadNpmTasks('grunt-browser-sync');
 	grunt.loadNpmTasks('grunt-contrib-clean');
 	grunt.loadNpmTasks('grunt-contrib-copy');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
+	grunt.loadNpmTasks('grunt-contrib-watch');
 
 	grunt.registerTask('build', ['clean', 'copy', 'uglify']);
 
