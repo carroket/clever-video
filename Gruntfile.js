@@ -11,15 +11,22 @@ module.exports = function (grunt) {
 		},
 
 		copy: {
-			build: {
+			demo: {
 				files: [
 					{
 						expand: true,
 						cwd: 'source/',
-						src: ['demo/**/*.html', 'demo/**/*.css', 'demo/**/*.js', 'clever-video.js'],
+						src: ['demo/**/*.html', 'demo/**/*.css', 'demo/**/*.js'],
 						dest: 'build/'
 					}
 				]
+			},
+			library: {
+
+				expand: true,
+				cwd: 'source/',
+				src: ['clever-video.js'],
+				dest: 'build/'
 			}
 		},
 
