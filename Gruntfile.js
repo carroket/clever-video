@@ -18,6 +18,12 @@ module.exports = function (grunt) {
 						cwd: 'source/',
 						src: ['demo/**/*.html', 'demo/**/*.css', 'demo/**/*.js'],
 						dest: 'build/'
+					},
+					{
+						expand: true,
+						cwd: 'source/',
+						src: ['clever-video.js'],
+						dest: 'build/demo/_assets/scripts/'
 					}
 				]
 			},
