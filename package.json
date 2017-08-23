@@ -13,6 +13,7 @@
     },
     "scripts": {
         "demo": "browser-sync start --server build/demo --index video.html",
+        "start": "grunt",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "repository": {
