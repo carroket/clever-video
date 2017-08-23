@@ -17,6 +17,18 @@ module.exports = function (grunt) {
 			}
 		},
 
+		build: {
+			demo: {
+				tasks: ['clean:demo', 'copy:demo']
+			},
+			docs: {
+				tasks: ['clean:docs', 'copy:docs', 'finalize-docs']
+			},
+			library: {
+				tasks: ['clean:library', 'copy:library', 'uglify']
+			}
+		},
+
 		clean: {
 			build: {
 				src: "build"
@@ -105,7 +117,10 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 
-	grunt.registerTask('build', ['clean', 'copy', 'uglify']);
+	grunt.registerMultiTask('build', 'Build all the things! Or just some of the things.', function() {
+
+		grunt.task.run(this.data.tasks);
+	});
 
 	grunt.registerTask('finalize-docs', 'Finalize the docs directory for publishing.', function() {
 
