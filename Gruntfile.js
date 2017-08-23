@@ -25,7 +25,14 @@ module.exports = function (grunt) {
 						src: ['clever-video.js'],
 						dest: 'build/demo/_assets/scripts/'
 					}
-				]
+				],
+				options: {
+					noProcess: ['**/*.css', '**/*.js'],
+					process: function(content, srcpath) {
+						grunt.log.writeln('Modifying path to clever-video.js in build copy of ' + srcpath + '.');
+						return content.replace('../clever-video.js', './_assets/scripts/clever-video.js');
+					}
+				}
 			},
 			library: {
 
