@@ -47,6 +47,20 @@ module.exports = function (grunt) {
 					}
 				}
 			},
+			docs: {
+				files: [
+					{
+						src: 'build/demo/video.html',
+						dest: 'docs/index.html'
+					},
+					{
+						expand: true,
+						cwd: 'build/demo',
+						src: '_assets/**',
+						dest: 'docs/'
+					}
+				]
+			},
 			library: {
 
 				expand: true,
